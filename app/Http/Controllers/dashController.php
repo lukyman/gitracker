@@ -18,8 +18,7 @@ class dashController extends Controller
     	//$gitUser = Socialite::driver('github')->user();
     	$client = new Client([
     		'base_url'=>'https://api.github.com'
-    		,
-    		'auth'=>['lukyman','8561luqman']
+    		
     		]);
 
     	$repos=$client->request(
