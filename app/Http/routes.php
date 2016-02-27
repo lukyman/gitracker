@@ -12,8 +12,10 @@
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('gitview.auth');
 });
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -28,4 +30,10 @@ Route::get('/', function () {
 
 Route::group(['middleware' => ['web']], function () {
     //
+    Route::get('auth/github',"GitAuthController@requestGitLogin");
+    Route::get('auth/github/callback','GitAuthController@GitAuthCallback');
+
+Route::get('dash','dashController@getDash');
+
+
 });
