@@ -16,8 +16,22 @@ class dashController extends Controller
     public function getDash()
     {
     	//$gitUser = Socialite::driver('github')->user();
-    	$client = new Client();
+    	$client = new Client([
+    		'base_url'=>'https://api.github.com'
+    		,
+    		'auth'=>['lukyman','8561luqman']
+    		]);
+
+    	$repos=$client->request(
+    		'Get',
+    		'https://api.github.com/users/lukyman/repos'
+    		);
+
+    	$repo_list =(String)$repos->getBody();
+    	return $repo_list;
+    	//return view('gitview.dash',['repo_list'=>$repo_list]);
 
     	//echo $gitUser();
+
     }
 }
