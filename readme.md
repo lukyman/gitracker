@@ -1,3 +1,18 @@
+# Gitracker
+Laravel web app for tracking github repository issues
+
+
+# Login with Github Account
+Url: http://localhost:8000
+
+# List of repositorys
+Url: http://localhost:8000/dash
+
+
+
+
+
+
 # Laravel PHP Framework
 
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
