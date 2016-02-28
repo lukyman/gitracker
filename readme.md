@@ -5,7 +5,7 @@ Laravel web app for tracking github repository issues
 # Login with Github Account
 Url: http://localhost:8000
 
-# List of repositorys
+# List of repositories
 Url: http://localhost:8000/dash
 
 
